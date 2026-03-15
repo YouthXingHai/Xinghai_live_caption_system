@@ -20,8 +20,11 @@ Each line is one step.
 Example:
 
 给我一片繁星 陪伴海棠花开
+
 [灯光渐亮]
+
 给你一湾瀚海 栽下杨柳满怀
+
 
 Lines inside [] are stage cues.
 
