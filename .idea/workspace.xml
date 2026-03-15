@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="1.架构更改&#10;2.完成控制端基本逻辑">
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="增加点击跳转功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773552810080</updated>
       <workItem from="1773552811146" duration="623000" />
-      <workItem from="1773560707636" duration="7391000" />
+      <workItem from="1773560707636" duration="9926000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773565851619</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加点击跳转功能">
+      <option name="closed" value="true" />
+      <created>1773568692905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773568692905</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +189,8 @@
     <MESSAGE value="ide配置文件更新" />
     <MESSAGE value="1.修复[]识别bug&#10;2.完成剧本加载功能&#10;3.字幕样式改为css" />
     <MESSAGE value="1.架构更改&#10;2.完成控制端基本逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.架构更改&#10;2.完成控制端基本逻辑" />
+    <MESSAGE value="增加点击跳转功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加点击跳转功能" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
