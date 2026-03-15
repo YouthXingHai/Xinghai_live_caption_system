@@ -73,6 +73,14 @@ function renderPreview() {
 
         d.innerText = lines[i]
 
+        // make each line clickable: send a goto action with the index
+        d.style.cursor = 'pointer'
+        d.onclick = () => {
+            if (ws && ws.readyState === 1) {
+                ws.send(JSON.stringify({ action: 'goto', index: i }))
+            }
+        }
+
         // Append first, then if it's the current line, mark and scroll it into view.
         div.appendChild(d)
 
@@ -94,35 +102,33 @@ async function reloadScripts() {
 
 }
 
-async function loadScripts() {
-
+async function loadScripts(){
     let r = await fetch("/scripts")
-
     let s = await r.json()
 
-    let div = document.getElementById("scripts")
+    let select = document.getElementById("script-select")
+    select.innerHTML = ""
 
-    div.innerHTML = ""
-
-    s.forEach(x => {
-
-        let b = document.createElement("button")
-
-        b.innerText = x
-
-        b.onclick = () => {
-
-            ws.send(JSON.stringify({
-                action: "switch",
-                script: x
-            }))
-
-        }
-
-        div.appendChild(b)
-
+    s.forEach(x=>{
+        let opt = document.createElement("option")
+        opt.value = x
+        opt.text = x
+        select.appendChild(opt)
     })
 
+    // 自动选中当前剧本
+    if(ws && ws.readyState===1){
+        select.value = lines.script
+    }
+}
+
+function switchScript(scriptName){
+    if(ws && ws.readyState===1){
+        ws.send(JSON.stringify({
+            action:"switch",
+            script: scriptName
+        }))
+    }
 }
 
 loadScripts()

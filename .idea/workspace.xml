@@ -4,43 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="1.修复[]识别bug&#10;2.完成剧本加载功能&#10;3.字幕样式改为css">
-      <change afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (10).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (11).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (12).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (13).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (14).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (2).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (3).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (4).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (5).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (6).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (7).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (8).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (9).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test1 - 副本.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/controller.css" afterDir="false" />
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="1.架构更改&#10;2.完成控制端基本逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/progress.json" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/progress.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/config_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/progress_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/progress_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/script_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/script_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/caption_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/websocket_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/websocket_hub.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/controller.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/subtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/subtitle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/subtitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/subtitle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/teleprompter.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/teleprompter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/teleprompter.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/teleprompter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/subtitle.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/subtitle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teleprompter.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teleprompter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773552810080</updated>
       <workItem from="1773552811146" duration="623000" />
-      <workItem from="1773560707636" duration="5014000" />
+      <workItem from="1773560707636" duration="7391000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -163,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773562108850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.架构更改&#10;2.完成控制端基本逻辑">
+      <option name="closed" value="true" />
+      <created>1773565851619</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773565851619</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +182,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ide配置文件更新" />
     <MESSAGE value="1.修复[]识别bug&#10;2.完成剧本加载功能&#10;3.字幕样式改为css" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.修复[]识别bug&#10;2.完成剧本加载功能&#10;3.字幕样式改为css" />
+    <MESSAGE value="1.架构更改&#10;2.完成控制端基本逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.架构更改&#10;2.完成控制端基本逻辑" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -74,6 +74,21 @@ async def ws(ws: WebSocket):
             if msg["action"] == "prev":
                 state.prev()
 
+            if msg["action"] == "goto":
+                # Jump to a specific index (ensure integer and in bounds)
+                try:
+                    idx = int(msg.get("index", 0))
+                except Exception:
+                    idx = 0
+
+                if idx < 0:
+                    idx = 0
+                if idx >= len(lines):
+                    idx = max(0, len(lines) - 1)
+
+                state.index = idx
+                state.save()
+
             if msg["action"] == "first":
                 state.first()
 
