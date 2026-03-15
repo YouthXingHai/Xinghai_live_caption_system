@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>字幕控制台</title>
+<style>
+.current{background:#ffd;font-weight:bold;}
+</style>
+</head>
+<body>
+<h2>Web 控制台</h2>
+<select id="scriptSelect"></select>
+<div id="preview" style="border:1px solid #ccc;padding:10px;max-height:300px;overflow:auto"></div>
+<br>
+<button onclick="prev()">上一句</button>
+<button onclick="next()">下一句</button>
+<script src="/static/controller.js"></script>
+</body>
+</html>
