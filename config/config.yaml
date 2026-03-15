@@ -3,7 +3,7 @@ server:
   port: 8000
 
 teleprompter:
-  next_lines: 5
+  next_lines: 5   #需设置为实际数量+1
 
 subtitle:
   remove_brackets: true

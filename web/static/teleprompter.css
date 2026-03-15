@@ -14,6 +14,13 @@ body {
 }
 
 #next div {
+    opacity: 0.8;
+    font-size: 28px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+#prev div {
     opacity: 0.6;
     font-size: 28px;
     margin-top: 4px;
