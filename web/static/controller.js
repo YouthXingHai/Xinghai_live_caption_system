@@ -1,57 +1,128 @@
-let ws = new WebSocket("ws://localhost:8000/ws")
-let scriptList = []
-let sel = document.getElementById("scriptSelect")
-let preview = document.getElementById("preview")
-let stateScript = null
+let ws
+let lines = []
+let currentIndex = 0
+let hotkeys = {}
 
-function loadScripts(){
-    fetch("/scripts").then(r=>r.json()).then(list=>{
-        scriptList = list
-        sel.innerHTML=""
-        list.forEach(name=>{
-            let opt=document.createElement("option")
-            opt.value=name
-            opt.innerText=name
-            sel.appendChild(opt)
-        })
-        if(list.length>0 && !stateScript){
-            sel.value=list[0]
-            ws.send(JSON.stringify({action:"switch", script:list[0]}))
-        }
-    })
-}
+function connect() {
 
-function reloadScripts(){
-    fetch("/scripts/reload", {method:"POST"}).then(r=>r.json()).then(data=>{
-        loadScripts()
-        alert("已重新加载")
-    })
-}
+    ws = new WebSocket("ws://" + location.host + "/ws")
 
-sel.onchange = ()=>{
-    stateScript = sel.value
-    ws.send(JSON.stringify({action:"switch", script:sel.value}))
-}
+    ws.onmessage = e => {
 
-function next(){ ws.send(JSON.stringify({action:"next"})) }
-function prev(){ ws.send(JSON.stringify({action:"prev"})) }
+        let d = JSON.parse(e.data)
 
-ws.onmessage = e=>{
-    let data=JSON.parse(e.data)
-    if(data.full_script){
-        preview.innerHTML = data.full_script.map((line,i)=>{
-            let cls = (i===data.index)?"current":""
-            return `<div class="${cls}">${line}</div>`
-        }).join("")
-        // 自动滚动
-        let cur = preview.querySelector(".current")
-        if(cur){
-            let containerHeight = preview.clientHeight
-            let scrollTop = cur.offsetTop - containerHeight/2 + cur.offsetHeight/2
-            preview.scrollTop = scrollTop
-        }
+        lines = d.full
+        currentIndex = d.index
+        hotkeys = d.hotkeys
+
+        renderPreview()
+
     }
+
+    ws.onclose = () => setTimeout(connect, 1000)
+
 }
 
-// 页面加载时先加载剧本
+connect()
+
+function next() {
+
+    ws.send(JSON.stringify({action: "next"}))
+
+}
+
+function prev() {
+
+    ws.send(JSON.stringify({action: "prev"}))
+
+}
+
+function first() {
+
+    ws.send(JSON.stringify({action: "first"}))
+
+}
+
+function last() {
+
+    ws.send(JSON.stringify({action: "last"}))
+
+}
+
+document.addEventListener("keydown", e => {
+
+    if (e.key == hotkeys.next) next()
+
+    if (e.key == hotkeys.prev) prev()
+
+    if (e.key == hotkeys.first) first()
+
+    if (e.key == hotkeys.last) last()
+
+})
+
+function renderPreview() {
+
+    let div = document.getElementById("preview")
+
+    div.innerHTML = ""
+
+    for (let i = 0; i < lines.length; i++) {
+
+        let d = document.createElement("div")
+
+        d.innerText = lines[i]
+
+        // Append first, then if it's the current line, mark and scroll it into view.
+        div.appendChild(d)
+
+        if (i == currentIndex) {
+            d.className = "current"
+            // Ensure the element is actually in the DOM and layout is ready before scrolling.
+            requestAnimationFrame(() => d.scrollIntoView({block: "center", behavior: "smooth"}));
+        }
+
+    }
+
+}
+
+async function reloadScripts() {
+
+    await fetch("/scripts/reload", {method: "POST"})
+
+    loadScripts()
+
+}
+
+async function loadScripts() {
+
+    let r = await fetch("/scripts")
+
+    let s = await r.json()
+
+    let div = document.getElementById("scripts")
+
+    div.innerHTML = ""
+
+    s.forEach(x => {
+
+        let b = document.createElement("button")
+
+        b.innerText = x
+
+        b.onclick = () => {
+
+            ws.send(JSON.stringify({
+                action: "switch",
+                script: x
+            }))
+
+        }
+
+        div.appendChild(b)
+
+    })
+
+}
+
 loadScripts()

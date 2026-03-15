@@ -1,13 +1,19 @@
-let ws_sub = new WebSocket("ws://localhost:8000/ws")
-let div = document.getElementById("subtitle")
+let ws = new WebSocket("ws://" + location.host + "/ws")
 
+ws.onmessage = e => {
+
+    let d = JSON.parse(e.data)
+
+    document.getElementById("subtitle").innerText = d.subtitle
+
+}
 ws_sub.onopen = () => {
     console.log("字幕 WebSocket 已连接")
 }
 
 ws_sub.onmessage = e => {
     let data = JSON.parse(e.data)
-    if(!data) return
+    if (!data) return
     div.innerText = data.subtitle || ""
 }
 

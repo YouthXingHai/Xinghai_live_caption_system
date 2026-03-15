@@ -1,13 +1,14 @@
 /* 可直接修改字体、大小、颜色、背景等 */
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     background: transparent;
     overflow: hidden;
 }
+
 .subtitle {
     position: absolute;
-    bottom: 50px;       /* 底部位置 */
+    bottom: 50px; /* 底部位置 */
     width: 100%;
     text-align: center;
     font-family: "Microsoft YaHei", sans-serif;

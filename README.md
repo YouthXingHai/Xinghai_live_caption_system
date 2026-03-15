@@ -5,7 +5,6 @@ A lightweight broadcast subtitle and teleprompter system for livestream producti
 ## Features
 
 - WebSocket realtime subtitle switching
-- GUI controller (PySide6)
 - Web controller
 - OBS / vMix browser subtitle output
 - Actor teleprompter
@@ -25,7 +24,6 @@ Example:
 
 给你一湾瀚海 栽下杨柳满怀
 
-
 Lines inside [] are stage cues.
 
 They appear on teleprompter but not on broadcast subtitles.
@@ -37,8 +35,6 @@ pip install -r requirements.txt
 ## Run Server
 
 uvicorn server.main:app --reload
-
-
 
 ## Outputs
 
