@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pyyaml
+PySide6
+websocket-client
+websockets
