@@ -1,0 +1,16 @@
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    color:white;
+    font-family:"Microsoft YaHei",
+    sans-serif;}
+#prompt{
+    font-size:36px;
+    text-align:center;
+    margin-top:20px;}
+#nextLines div{
+    opacity:0.6;
+    font-size:28px;
+    margin-top:4px;
+    text-align:center;}

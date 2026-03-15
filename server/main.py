@@ -5,16 +5,11 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 # -----------------------------
-# 配置
-# -----------------------------
 SCRIPTS_DIR = os.path.join(os.path.dirname(__file__), "../scripts")
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "../web/static")
 WEB_DIR = os.path.join(os.path.dirname(__file__), "../web")
-PROGRESS_FILE = os.path.join(os.path.dirname(__file__), "../runtime/progress.json")
 TELEPROMPTER_NEXT = 5
 
-# -----------------------------
-# 脚本管理
 # -----------------------------
 class ScriptManager:
     def __init__(self, folder):
@@ -23,6 +18,7 @@ class ScriptManager:
         self.load_all_scripts()
 
     def load_all_scripts(self):
+        self.scripts.clear()
         for f in os.listdir(self.folder):
             if f.endswith(".txt"):
                 self.scripts[f] = self.load_script(f)
@@ -34,9 +30,8 @@ class ScriptManager:
             for l in f:
                 t = l.strip()
                 if not t: continue
-                cue = bool(re.match(r"^\[.*\]$", t))
-                subtitle = "" if cue else t
-                lines.append({"teleprompter": t, "subtitle": subtitle, "cue": cue})
+                subtitle = re.sub(r"\[.*?\]", "", t).strip()
+                lines.append({"teleprompter": t, "subtitle": subtitle})
         return lines
 
     def list_scripts(self):
@@ -45,8 +40,8 @@ class ScriptManager:
     def get_script(self, name):
         return self.scripts.get(name, [])
 
-# -----------------------------
-# 状态管理
+scripts = ScriptManager(SCRIPTS_DIR)
+
 # -----------------------------
 class CaptionState:
     def __init__(self):
@@ -60,18 +55,13 @@ class CaptionState:
         self.index=0
 
     def next(self):
-        if self.index < len(self.lines)-1:
-            self.index+=1
+        if self.index < len(self.lines)-1: self.index+=1
 
     def prev(self):
-        if self.index>0:
-            self.index-=1
+        if self.index>0: self.index-=1
 
-    def jump_top(self):
-        self.index=0
-
-    def jump_end(self):
-        self.index=len(self.lines)-1
+    def jump_top(self): self.index=0
+    def jump_end(self): self.index=len(self.lines)-1
 
     def current_subtitle(self):
         if not self.lines: return ""
@@ -88,61 +78,33 @@ class CaptionState:
     def full_script(self):
         return [l["teleprompter"] for l in self.lines]
 
-# -----------------------------
-# WebSocket 管理
+state = CaptionState()
+
 # -----------------------------
 class WSManager:
-    def __init__(self):
-        self.clients=[]
-
+    def __init__(self): self.clients=[]
     async def connect(self, ws):
         await ws.accept()
         self.clients.append(ws)
-
     def disconnect(self, ws):
-        if ws in self.clients:
-            self.clients.remove(ws)
-
+        if ws in self.clients: self.clients.remove(ws)
     async def broadcast(self, data):
         for c in self.clients:
-            try:
-                await c.send_json(data)
-            except:
-                pass
+            try: await c.send_json(data)
+            except: pass
 
-# -----------------------------
-# Progress 管理
-# -----------------------------
-class ProgressManager:
-    def __init__(self,path):
-        self.path=path
-        os.makedirs(os.path.dirname(path),exist_ok=True)
-
-    def save(self,script,index):
-        with open(self.path,"w",encoding="utf8") as f:
-            json.dump({"script":script,"index":index},f)
-
-    def load(self):
-        try:
-            with open(self.path,"r",encoding="utf8") as f:
-                return json.load(f)
-        except:
-            return None
-
-# -----------------------------
-# 初始化
-# -----------------------------
-scripts = ScriptManager(SCRIPTS_DIR)
-state = CaptionState()
 ws_manager = WSManager()
-progress = ProgressManager(PROGRESS_FILE)
 
 app = FastAPI()
 
-# REST: 获取剧本列表
+# -----------------------------
 @app.get("/scripts")
-def get_scripts():
-    return JSONResponse(content=scripts.list_scripts())
+def get_scripts(): return JSONResponse(content=scripts.list_scripts())
+
+@app.post("/scripts/reload")
+def reload_scripts():
+    scripts.load_all_scripts()
+    return JSONResponse(content={"success": True, "scripts": scripts.list_scripts()})
 
 # WebSocket
 @app.websocket("/ws")
@@ -159,8 +121,7 @@ async def websocket_endpoint(ws: WebSocket):
             elif action=="switch":
                 name = data["script"]
                 lines = scripts.get_script(name)
-                state.switch_script(name, lines)
-            progress.save(state.current_script_name,state.index)
+                state.switch_script(name,lines)
             await broadcast()
     except:
         ws_manager.disconnect(ws)
@@ -176,8 +137,6 @@ async def broadcast():
     }
     await ws_manager.broadcast(payload)
 
-# -----------------------------
-# 静态文件挂载
 # -----------------------------
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 app.mount("/web", StaticFiles(directory=WEB_DIR, html=True), name="web")

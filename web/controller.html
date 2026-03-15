@@ -5,12 +5,14 @@
 <title>字幕控制台</title>
 <style>
 .current{background:#ffd;font-weight:bold;}
+#preview{border:1px solid #ccc;padding:10px;max-height:300px;overflow:auto;}
 </style>
 </head>
 <body>
 <h2>Web 控制台</h2>
+<button onclick="reloadScripts()">Reload</button>
 <select id="scriptSelect"></select>
-<div id="preview" style="border:1px solid #ccc;padding:10px;max-height:300px;overflow:auto"></div>
+<div id="preview"></div>
 <br>
 <button onclick="prev()">上一句</button>
 <button onclick="next()">下一句</button>
