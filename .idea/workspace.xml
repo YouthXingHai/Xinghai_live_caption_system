@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="code cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
 }</component>
   <component name="RunManager">
     <configuration name="main" type="ShConfigurationType">
-      <option name="SCRIPT_TEXT" value="uvicorn server.main:app --reload" />
+      <option name="SCRIPT_TEXT" value="uvicorn server.main:app --reload --host 0.0.0.0" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -113,7 +113,7 @@
       <updated>1773552810080</updated>
       <workItem from="1773552811146" duration="623000" />
       <workItem from="1773560707636" duration="15903000" />
-      <workItem from="1773843372594" duration="1667000" />
+      <workItem from="1773843372594" duration="1908000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -179,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773845000940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="code cleanup">
+      <option name="closed" value="true" />
+      <created>1773845094059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773845094059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
