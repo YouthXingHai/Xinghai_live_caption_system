@@ -4,4 +4,3 @@ websockets
 pyyaml
 numpy
 opencv-python
-ndi-python
