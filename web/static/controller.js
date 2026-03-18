@@ -77,7 +77,7 @@ function renderPreview() {
         d.style.cursor = 'pointer'
         d.onclick = () => {
             if (ws && ws.readyState === 1) {
-                ws.send(JSON.stringify({ action: 'goto', index: i }))
+                ws.send(JSON.stringify({action: 'goto', index: i}))
             }
         }
 
@@ -102,14 +102,14 @@ async function reloadScripts() {
 
 }
 
-async function loadScripts(){
+async function loadScripts() {
     let r = await fetch("/scripts")
     let s = await r.json()
 
     let select = document.getElementById("script-select")
     select.innerHTML = ""
 
-    s.forEach(x=>{
+    s.forEach(x => {
         let opt = document.createElement("option")
         opt.value = x
         opt.text = x
@@ -117,15 +117,15 @@ async function loadScripts(){
     })
 
     // 自动选中当前剧本
-    if(ws && ws.readyState===1){
+    if (ws && ws.readyState === 1) {
         select.value = lines.script
     }
 }
 
-function switchScript(scriptName){
-    if(ws && ws.readyState===1){
+function switchScript(scriptName) {
+    if (ws && ws.readyState === 1) {
         ws.send(JSON.stringify({
-            action:"switch",
+            action: "switch",
             script: scriptName
         }))
     }

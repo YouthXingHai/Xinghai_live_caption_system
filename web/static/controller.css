@@ -33,3 +33,22 @@ body {
     font-weight: bold;
 
 }
+/* 顶部标题 */
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1976d2;
+}
