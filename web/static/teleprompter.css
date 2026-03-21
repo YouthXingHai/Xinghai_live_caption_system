@@ -1,6 +1,11 @@
+:root {
+    --side-padding: 140px;
+}
+
 body {
     margin: 0;
     padding: 0;
+    padding-left: var(--side-padding);
     background: black;
     color: white;
     font-family: "Microsoft YaHei",
@@ -19,4 +24,3 @@ body {
     margin-top: 4px;
     text-align: left;
 }
-
