@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="code cleanup">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/progress.json" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/progress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (10).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (10).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (11).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (11).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (12).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (12).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (13).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (13).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (14).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/示例剧本.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (2).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (2).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (3).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (3).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (4).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (4).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (6).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (6).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (7).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (7).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (8).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (8).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (9).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本 (9).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1 - 副本.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/caption_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/caption_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/config_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/progress_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/progress_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/script_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/script_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/websocket_hub.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/websocket_hub.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +59,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -42,12 +67,12 @@
     &quot;assignee&quot;: &quot;zhangxu1233&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/YouthXingHai/Xinghai_live_caption_system.git",
-    "accountId": "37399432-67c7-4217-bdbe-8efbd3f5a635"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/YouthXingHai/Xinghai_live_caption_system.git&quot;,
+    &quot;accountId&quot;: &quot;37399432-67c7-4217-bdbe-8efbd3f5a635&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -114,6 +139,9 @@
       <workItem from="1773552811146" duration="623000" />
       <workItem from="1773560707636" duration="15903000" />
       <workItem from="1773843372594" duration="1908000" />
+      <workItem from="1774105659270" duration="319000" />
+      <workItem from="1774106014712" duration="312000" />
+      <workItem from="1774106375903" duration="659000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
