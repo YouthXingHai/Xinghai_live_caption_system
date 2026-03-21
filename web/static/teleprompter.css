@@ -9,7 +9,7 @@ body {
 
 #current {
     font-size: 100px;
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 }
 
@@ -17,6 +17,6 @@ body {
     opacity: 0.8;
     font-size: 80px;
     margin-top: 4px;
-    text-align: center;
+    text-align: left;
 }
 

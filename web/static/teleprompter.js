@@ -4,7 +4,7 @@ ws.onmessage = e => {
 
     let d = JSON.parse(e.data)
 
-    document.getElementById("current").innerText = d.prompt
+    document.getElementById("teleprompter").innerText = d.prompt
 
     let next = document.getElementById("next")
     next.innerHTML = ""

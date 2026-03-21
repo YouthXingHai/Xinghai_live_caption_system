@@ -28,10 +28,21 @@ class ScriptManager:
             self.scripts[f] = parsed
 
     def parse_line(self, line):
+        import re
 
-        cues = re.findall(r"\[(.*?)\]", line)
+        pair_pattern = r"[\(\[\{\（【〖〈《「『][^\)\]\}\）】〗〉》」』]*?[\)\]\}\）】〗〉》」』]"
 
-        subtitle = re.sub(r"\[.*?\]", "", line).strip()
+        cues = re.findall(r"[\(\[\{\（【〖〈《「『](.*?)[\)\]\}\）】〗〉》」』]", line)
+
+        cleaned = line
+        while True:
+            new = re.sub(pair_pattern, "", cleaned)
+            if new == cleaned:
+                break
+            cleaned = new
+
+        subtitle = re.sub(r"[\(\)\[\]\{\}（）【】〖〗〈〉《》「』『」]", "", cleaned).strip()
+
 
         return {
             "raw": line,
