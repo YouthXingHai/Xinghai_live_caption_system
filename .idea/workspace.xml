@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="teleprompter left align">
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="highlight the stage requirements in controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/teleprompter.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teleprompter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +112,7 @@
       <workItem from="1774105659270" duration="319000" />
       <workItem from="1774106014712" duration="312000" />
       <workItem from="1774106375903" duration="2526000" />
-      <workItem from="1774180519976" duration="170000" />
+      <workItem from="1774180519976" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -209,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774108825821</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="highlight the stage requirements in controller">
+      <option name="closed" value="true" />
+      <created>1774180940771</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1774180940771</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +267,8 @@
     <MESSAGE value="fix bug&#10;test example script" />
     <MESSAGE value="optimize the regular expression for separating prompts&#10;teleprompter left align" />
     <MESSAGE value="teleprompter left align" />
-    <option name="LAST_COMMIT_MESSAGE" value="teleprompter left align" />
+    <MESSAGE value="highlight the stage requirements in controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="highlight the stage requirements in controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
