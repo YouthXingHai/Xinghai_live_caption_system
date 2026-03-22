@@ -7,6 +7,7 @@
     <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="highlight the stage requirements in controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/controller.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
     </list>
@@ -219,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774180940771</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="highlight the stage requirements in controller">
+      <option name="closed" value="true" />
+      <created>1774182948902</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1774182948902</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
