@@ -52,3 +52,9 @@ body {
     font-weight: bold;
     color: #1976d2;
 }
+
+.cue-highlight {
+    font-weight: 400;
+    background: #ffff00;
+    color: #ff0000;
+}

@@ -66,7 +66,7 @@ function escapeHtml(str) {
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
+        .replace(/\"/g, "&quot;")
         .replace(/'/g, "&#39;");
 }
 
@@ -79,10 +79,10 @@ function renderPreview() {
     for (let i = 0; i < lines.length; i++) {
         let d = document.createElement("div")
 
-        // 先转义再把中括号内的文字替换为带样式的 span（只把中括号内的文字设为红色）
+        // 先转义再把中括号内的文字替换为带 class 的 span（使用 .cue-highlight）
         let safe = escapeHtml(lines[i] == null ? "" : lines[i])
         let highlighted = safe.replace(/\[([^\]]+)\]/g, (m, p1) => {
-            return "[" + "<span style=\"color:red\">" + p1 + "</span>" + "]"
+            return "[" + "<span class=\"cue-highlight\">" + p1 + "</span>" + "]"
         })
 
         d.innerHTML = highlighted

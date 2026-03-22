@@ -7,7 +7,8 @@
     <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="highlight the stage requirements in controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teleprompter.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teleprompter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
