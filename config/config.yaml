@@ -3,7 +3,7 @@ server:
   port: 8000
 
 teleprompter:
-  next_lines: 5
+  next_lines: 7
 
 subtitle:
   remove_brackets: true

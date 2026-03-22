@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="highlight the stage requirements in controller">
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="add display mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (12).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/11我们的荆轲.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (13).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/SH215.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/teleprompter.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/teleprompter.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +116,7 @@
       <workItem from="1774106014712" duration="312000" />
       <workItem from="1774106375903" duration="2526000" />
       <workItem from="1774180519976" duration="749000" />
+      <workItem from="1774658799840" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -219,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774180940771</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="highlight the stage requirements in controller">
+      <option name="closed" value="true" />
+      <created>1774182948902</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1774182948902</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add display mode">
+      <option name="closed" value="true" />
+      <created>1774184156720</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1774184156720</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +288,8 @@
     <MESSAGE value="optimize the regular expression for separating prompts&#10;teleprompter left align" />
     <MESSAGE value="teleprompter left align" />
     <MESSAGE value="highlight the stage requirements in controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="highlight the stage requirements in controller" />
+    <MESSAGE value="add display mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="add display mode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
