@@ -61,19 +61,32 @@ document.addEventListener("keydown", e => {
 
 })
 
-function renderPreview() {
+function escapeHtml(str) {
+    return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
 
+function renderPreview() {
     let div = document.getElementById("preview")
+    if (!div) return
 
     div.innerHTML = ""
 
     for (let i = 0; i < lines.length; i++) {
-
         let d = document.createElement("div")
 
-        d.innerText = lines[i]
+        // 先转义再把中括号内的文字替换为带样式的 span（只把中括号内的文字设为红色）
+        let safe = escapeHtml(lines[i] == null ? "" : lines[i])
+        let highlighted = safe.replace(/\[([^\]]+)\]/g, (m, p1) => {
+            return "[" + "<span style=\"color:red\">" + p1 + "</span>" + "]"
+        })
 
-        // make each line clickable: send a goto action with the index
+        d.innerHTML = highlighted
+
         d.style.cursor = 'pointer'
         d.onclick = () => {
             if (ws && ws.readyState === 1) {
@@ -81,18 +94,15 @@ function renderPreview() {
             }
         }
 
-        // Append first, then if it's the current line, mark and scroll it into view.
         div.appendChild(d)
 
         if (i == currentIndex) {
             d.className = "current"
-            // Ensure the element is actually in the DOM and layout is ready before scrolling.
             requestAnimationFrame(() => d.scrollIntoView({block: "center", behavior: "smooth"}));
         }
-
     }
-
 }
+
 
 async function reloadScripts() {
 
