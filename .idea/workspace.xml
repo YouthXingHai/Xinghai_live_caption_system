@@ -8,9 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (12).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/11我们的荆轲.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (13).txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/SH215.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/SH215.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/07.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/subtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/subtitle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/teleprompter.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/teleprompter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/teleprompter.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teleprompter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,8 @@
       <workItem from="1774106014712" duration="312000" />
       <workItem from="1774106375903" duration="2526000" />
       <workItem from="1774180519976" duration="749000" />
-      <workItem from="1774658799840" duration="1966000" />
+      <workItem from="1774658799840" duration="9131000" />
+      <workItem from="1774704051881" duration="2386000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -238,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774184156720</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add display mode">
+      <option name="closed" value="true" />
+      <created>1774661190307</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1774661190307</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +298,7 @@
     <MESSAGE value="optimize the regular expression for separating prompts&#10;teleprompter left align" />
     <MESSAGE value="teleprompter left align" />
     <MESSAGE value="highlight the stage requirements in controller" />
+    <MESSAGE value="Teleprompter test" />
     <MESSAGE value="add display mode" />
     <option name="LAST_COMMIT_MESSAGE" value="add display mode" />
   </component>

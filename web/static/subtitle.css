@@ -8,12 +8,20 @@ body {
 
 .subtitle {
     position: absolute;
-    bottom: 50px; /* 底部位置 */
+    bottom: 50px;
     width: 100%;
     text-align: center;
     font-family: "Microsoft YaHei", sans-serif;
     font-size: 64px;
-    color: white;
-    text-shadow: 2px 2px 4px black;
+
+    color: #008eff;
+
+    -webkit-text-stroke: 2px #003a66;
+
+    /* 白色发光效果 */
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5),
+        0 0 10px rgba(255,255,255,0.3);
+
     line-height: 1.2;
 }
