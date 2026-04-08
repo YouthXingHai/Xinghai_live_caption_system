@@ -23,22 +23,37 @@ app.mount("/static", StaticFiles(directory="web/static"))
 
 
 def build_state():
-    lines = scripts.get(state.script)
+    # get the lines for the currently selected script (may be empty)
+    lines = scripts.get(state.script) or []
 
-    if not lines:
-        return {}
+    # ensure index is within bounds
+    if lines:
+        if state.index < 0:
+            state.index = 0
+        if state.index >= len(lines):
+            state.index = max(0, len(lines) - 1)
 
-    cur = lines[state.index]
+        cur = lines[state.index]
 
-    next_lines = lines[state.index + 1:state.index + config.get("teleprompter")["next_lines"]]
+        subtitle = cur.get("subtitle", "")
+        prompt = cur.get("teleprompter", "")
+
+        next_count = config.get("teleprompter").get("next_lines", 5)
+        next_lines = lines[state.index + 1: state.index + 1 + next_count]
+
+    else:
+        # no lines available for the current script
+        subtitle = ""
+        prompt = ""
+        next_lines = []
 
     return {
         "script": state.script,
         "index": state.index,
-        "subtitle": cur["subtitle"],
-        "prompt": cur["teleprompter"],
-        "next": [x["teleprompter"] for x in next_lines],
-        "full": [x["teleprompter"] for x in lines],
+        "subtitle": subtitle,
+        "prompt": prompt,
+        "next": [x.get("teleprompter", "") for x in next_lines],
+        "full": [x.get("teleprompter", "") for x in lines],
         "hotkeys": hotkeys
     }
 

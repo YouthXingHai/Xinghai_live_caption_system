@@ -2,8 +2,9 @@ let ws
 let lines = []
 let currentIndex = 0
 let hotkeys = {}
+let currentScript = null
 
-let displayMode = false   // 纯显示模式
+let displayMode = false   // 屏蔽控制模式
 
 
 function connect() {
@@ -14,9 +15,22 @@ function connect() {
 
         let d = JSON.parse(e.data)
 
-        lines = d.full
-        currentIndex = d.index
-        hotkeys = d.hotkeys
+        // update state only if fields exist
+        if (d.full) lines = d.full
+        if (typeof d.index === 'number') currentIndex = d.index
+        if (d.hotkeys) hotkeys = d.hotkeys
+        if (d.script) currentScript = d.script
+
+        // try to sync the script select if it exists
+        const select = document.getElementById("script-select")
+        if (select && currentScript) {
+            // if option exists, set it
+            try {
+                select.value = currentScript
+            } catch (e) {
+                // ignore
+            }
+        }
 
         renderPreview()
 
@@ -211,6 +225,15 @@ async function loadScripts() {
         select.appendChild(opt)
 
     })
+
+    // after populating, try to set current script if server provided it
+    if (currentScript) {
+        try {
+            select.value = currentScript
+        } catch (e) {
+            // ignore
+        }
+    }
 
 }
 
