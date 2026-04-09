@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="update text color to #02a1e8 and add dark blue stroke with subtle glow">
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="fix bug of controller sync">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,6 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -124,7 +121,8 @@
       <workItem from="1774704051881" duration="2475000" />
       <workItem from="1775051509860" duration="485000" />
       <workItem from="1775275748374" duration="22000" />
-      <workItem from="1775659893323" duration="446000" />
+      <workItem from="1775659893323" duration="598000" />
+      <workItem from="1775743729773" duration="332000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -262,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774789857413</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix bug of controller sync">
+      <option name="closed" value="true" />
+      <created>1775660373092</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1775660373092</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +321,8 @@
     <MESSAGE value="Teleprompter test" />
     <MESSAGE value="add display mode" />
     <MESSAGE value="update text color to #02a1e8 and add dark blue stroke with subtle glow" />
-    <option name="LAST_COMMIT_MESSAGE" value="update text color to #02a1e8 and add dark blue stroke with subtle glow" />
+    <MESSAGE value="fix bug of controller sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug of controller sync" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

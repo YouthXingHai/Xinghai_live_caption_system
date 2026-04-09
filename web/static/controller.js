@@ -3,7 +3,6 @@ let lines = []
 let currentIndex = 0
 let hotkeys = {}
 let currentScript = null
-
 let displayMode = false   // 屏蔽控制模式
 
 
