@@ -16,6 +16,9 @@ hub = WebSocketHub()
 
 hotkeys = config.get("hotkeys")
 
+import logging
+logger = logging.getLogger("uvicorn")
+
 app = FastAPI()
 
 app.mount("/web", StaticFiles(directory="web", html=True))
@@ -66,7 +69,7 @@ def list_scripts():
 @app.post("/scripts/reload")
 def reload_scripts():
     scripts.load_scripts()
-    print(f"[bold magenta]scripts reloaded")
+    logger.info("scripts reloaded")
     return {"status": "ok"}
 
 
@@ -86,11 +89,11 @@ async def ws(ws: WebSocket):
 
             if msg["action"] == "next":
                 state.next(len(lines))
-                print(f" next: {state.script} -> index {state.index}")
+                logger.info(f"next: {state.script} -> index {state.index}")
 
             if msg["action"] == "prev":
                 state.prev()
-                print(f" prev: {state.script} -> index {state.index}")
+                logger.info(f"prev: {state.script} -> index {state.index}")
 
             if msg["action"] == "goto":
                 # Jump to a specific index (ensure integer and in bounds)
@@ -106,21 +109,21 @@ async def ws(ws: WebSocket):
 
                 state.index = idx
                 state.save()
-                print(f" goto: {state.script} -> index {state.index}")
+                logger.info(f"goto: {state.script} -> index {state.index}")
 
             if msg["action"] == "first":
                 state.first()
-                print(f" first: {state.script} -> index {state.index}")
+                logger.info(f"first: {state.script} -> index {state.index}")
 
             if msg["action"] == "last":
                 state.last(len(lines))
-                print(f" last: {state.script} -> index {state.index}")
+                logger.info(f"last: {state.script} -> index {state.index}")
 
             if msg["action"] == "switch":
                 state.script = msg["script"]
                 state.index = 0
                 state.save()
-                print(f"switch to {state.script}")
+                logger.info(f"switch to {state.script}")
             data = build_state()
 
             await hub.broadcast(data)
