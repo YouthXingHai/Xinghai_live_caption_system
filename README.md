@@ -47,6 +47,15 @@ http://localhost:8000/web/teleprompter.html
 Web Controller:
 http://localhost:8000/web/controller.html
 
+Access the website after adding mDNS and Nginx reverse proxy：
+
+Subtitle: http://infoadmin.local/s
+
+Teleprompter: http://infoadmin.local/t
+
+Controller: http://infoadmin.local/c
+
+
 ## OBS / vMix
 
 Add Browser Source
