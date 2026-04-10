@@ -89,11 +89,11 @@ async def ws(ws: WebSocket):
 
             if msg["action"] == "next":
                 state.next(len(lines))
-                logger.info(f"next: {state.script} -> index {state.index}")
+                logger.info(f"next:->index {state.index}")
 
             if msg["action"] == "prev":
                 state.prev()
-                logger.info(f"prev: {state.script} -> index {state.index}")
+                logger.info(f"prev:->index {state.index}")
 
             if msg["action"] == "goto":
                 # Jump to a specific index (ensure integer and in bounds)
@@ -109,15 +109,15 @@ async def ws(ws: WebSocket):
 
                 state.index = idx
                 state.save()
-                logger.info(f"goto: {state.script} -> index {state.index}")
+                logger.info(f"goto:index {state.index}")
 
             if msg["action"] == "first":
                 state.first()
-                logger.info(f"first: {state.script} -> index {state.index}")
+                logger.info(f"first: {state.script}")
 
             if msg["action"] == "last":
                 state.last(len(lines))
-                logger.info(f"last: {state.script} -> index {state.index}")
+                logger.info(f"last: {state.script}")
 
             if msg["action"] == "switch":
                 state.script = msg["script"]

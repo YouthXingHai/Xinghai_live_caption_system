@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="Optimize log">
-      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor_gpio.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor_gpio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +124,8 @@
       <workItem from="1775275748374" duration="22000" />
       <workItem from="1775659893323" duration="598000" />
       <workItem from="1775743729773" duration="2106000" />
-      <workItem from="1775788017942" duration="8621000" />
+      <workItem from="1775788017942" duration="10271000" />
+      <workItem from="1775835832384" duration="2414000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -301,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775823221308</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Optimize log">
+      <option name="closed" value="true" />
+      <created>1775823372878</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1775823372878</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
