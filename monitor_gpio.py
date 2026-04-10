@@ -3,55 +3,54 @@ import time
 import subprocess
 import os
 
-button = GPIO("/dev/gpiochip0", 18, "in")
-led = GPIO("/dev/gpiochip0", 203, "out")
-
-process = None  # 用于存储运行中的进程对象
-is_running = False
+os.system("sudo chmod 666 /dev/tty1")
 
 
-def start_app():
-    global process, is_running
-    print("\n[系统通知] 正在启动 Xinghai Live Caption System...")
-    cmd = "/home/pi/Xinghai_live_caption_system/run_app.sh"
-    process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
-    is_running = True
-    led.write(True)
+def log_to_screen(msg):
+    timestamp = time.strftime("%H:%M:%S")
+    formatted_msg = "\n[{}] [MONITOR] {}\n".format(timestamp, msg)
+    try:
+        with open("/dev/tty1", "w") as f:
+            f.write(formatted_msg)
+    except:
+        pass
+    print(msg)
 
-
-def stop_app():
-    global process, is_running
-    print("\n[系统通知] 正在停止系统...")
-    if process:
-        os.killpg(os.getpgid(process.pid), 9)
-        process = None
-    is_running = False
-    led.write(False)
-
-print("GPIO 监控已启动，等待按键操作...")
 
 try:
-    last_state = button.read()
-    while True:
-        current_state = button.read()
+    # Pin 4 = Start, Pin 3 = Stop (on gpiochip1)
+    btn_start = GPIO("/dev/gpiochip1", 4, "in")
+    btn_stop = GPIO("/dev/gpiochip1", 3, "in")
+    # LED indicator (on gpiochip0)
+    led = GPIO("/dev/gpiochip0", 203, "out")
+except Exception as e:
+    log_to_screen("GPIO Init Error: {}".format(e))
+    exit(1)
 
-        if current_state != last_state:
-            if not current_state:
-                if not is_running:
-                    start_app()
-                else:
-                    stop_app()
+process = None
 
-                # 消抖
-                time.sleep(0.5)
+while True:
+    try:
+        if btn_start.read() == False:
+            if not process or process.poll() is not None:
+                log_to_screen("START button triggered.")
+                cmd = "/home/pi/Xinghai_live_caption_system/run_app.sh"
+                # Start the system in a new process group
+                process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
+                led.write(True)
+            else:
+                log_to_screen("System already running.")
+            time.sleep(0.5)  # Debounce
 
-            last_state = current_state
+        if btn_stop.read() == False:
+            log_to_screen("STOP button triggered.")
+            if process:
+                os.killpg(os.getpgid(process.pid), 9)
+                process = None
+            led.write(False)
+            time.sleep(0.5)  # Debounce
 
-        time.sleep(0.05)
+    except Exception as e:
+        log_to_screen("Loop Error: {}".format(e))
 
-except KeyboardInterrupt:
-    if is_running:
-        stop_app()
-finally:
-    button.close()
-    led.close()
+    time.sleep(0.05)

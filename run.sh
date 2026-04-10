@@ -6,16 +6,16 @@ cd "$PROJECT_DIR"
 LOG_FILE="$PROJECT_DIR/app.log"
 
 echo "-----------------------------------" >> $LOG_FILE
-echo "[$(date)] 启动开始..." >> $LOG_FILE
+echo "[$(date)] Startup sequence initiated..." >> $LOG_FILE
 
 if [ ! -d "venv" ]; then
-    echo "错误: 未发现虚拟环境 venv 文件夹！" | tee -a $LOG_FILE
+    echo "ERROR: Virtual environment 'venv' not found!" | tee -a $LOG_FILE
     exit 1
 fi
 
 
 source venv/bin/activate
 
-echo "正在启动Xinghai Live Caption System..." | tee -a $LOG_FILE
+echo "tarting Uvicorn service..." | tee -a $LOG_FILE
 
-exec python -m uvicorn server.main:app --reload --host 0.0.0.0 >> $LOG_FILE 2>&1 | tee /dev/tty1
+exec python -m uvicorn server.main:app --reload --host 0.0.0.0 2>&1 | tee -a $LOG_FILE /dev/tty1

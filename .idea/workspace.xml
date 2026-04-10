@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="fix bug of controller sync">
-      <change afterPath="$PROJECT_DIR$/monitor_gpio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="add GPIO monitoring and application control scripts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor_gpio.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor_gpio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +126,7 @@
       <workItem from="1775275748374" duration="22000" />
       <workItem from="1775659893323" duration="598000" />
       <workItem from="1775743729773" duration="2106000" />
-      <workItem from="1775788017942" duration="3572000" />
+      <workItem from="1775788017942" duration="8177000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -278,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775744098813</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add GPIO monitoring and application control scripts">
+      <option name="closed" value="true" />
+      <created>1775814937851</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1775814937851</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +342,8 @@
     <MESSAGE value="add display mode" />
     <MESSAGE value="update text color to #02a1e8 and add dark blue stroke with subtle glow" />
     <MESSAGE value="fix bug of controller sync" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug of controller sync" />
+    <MESSAGE value="add GPIO monitoring and application control scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add GPIO monitoring and application control scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
