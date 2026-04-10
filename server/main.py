@@ -66,7 +66,7 @@ def list_scripts():
 @app.post("/scripts/reload")
 def reload_scripts():
     scripts.load_scripts()
-    logger.info(f"[bold magenta][yellow]scripts reloaded[/yellow]")
+    print(f"[bold magenta]scripts reloaded")
     return {"status": "ok"}
 
 
@@ -86,11 +86,11 @@ async def ws(ws: WebSocket):
 
             if msg["action"] == "next":
                 state.next(len(lines))
-                logger.info(f"[green]next: {state.script} -> index {state.index}[/green]")
+                print(f" next: {state.script} -> index {state.index}")
 
             if msg["action"] == "prev":
                 state.prev()
-                logger.info(f"[green]prev: {state.script} -> index {state.index}[/green]")
+                print(f" prev: {state.script} -> index {state.index}")
 
             if msg["action"] == "goto":
                 # Jump to a specific index (ensure integer and in bounds)
@@ -106,21 +106,21 @@ async def ws(ws: WebSocket):
 
                 state.index = idx
                 state.save()
-                logger.info(f"[green]goto: {state.script} -> index {state.index}[/green]")
+                print(f" goto: {state.script} -> index {state.index}")
 
             if msg["action"] == "first":
                 state.first()
-                logger.info(f"[green]first: {state.script} -> index {state.index}[/green]")
+                print(f" first: {state.script} -> index {state.index}")
 
             if msg["action"] == "last":
                 state.last(len(lines))
-                logger.info(f"[green]last: {state.script} -> index {state.index}[/green]")
+                print(f" last: {state.script} -> index {state.index}")
 
             if msg["action"] == "switch":
                 state.script = msg["script"]
                 state.index = 0
                 state.save()
-                logger.info(f"[yellow]switch to {state.script}[/yellow]")
+                print(f"switch to {state.script}")
             data = build_state()
 
             await hub.broadcast(data)

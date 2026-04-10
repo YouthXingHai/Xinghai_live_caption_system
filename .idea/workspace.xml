@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="add GPIO monitoring and application control scripts">
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="Optimize log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor_gpio.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor_gpio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
     </list>
@@ -126,7 +124,7 @@
       <workItem from="1775275748374" duration="22000" />
       <workItem from="1775659893323" duration="598000" />
       <workItem from="1775743729773" duration="2106000" />
-      <workItem from="1775788017942" duration="8177000" />
+      <workItem from="1775788017942" duration="8489000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -288,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775814937851</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Optimize log">
+      <option name="closed" value="true" />
+      <created>1775823022085</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1775823022085</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +349,8 @@
     <MESSAGE value="update text color to #02a1e8 and add dark blue stroke with subtle glow" />
     <MESSAGE value="fix bug of controller sync" />
     <MESSAGE value="add GPIO monitoring and application control scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add GPIO monitoring and application control scripts" />
+    <MESSAGE value="Optimize log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
