@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="Optimize log">
+    <list default="true" id="a97bfad1-be47-4e02-aa58-0028559e19fe" name="更改" comment="Optimize log fix1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor_gpio.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor_gpio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/state.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/state.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/11我们的荆轲.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (10).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (11).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (2).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (3).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (4).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (6).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (7).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (8).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本 (9).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1 - 副本.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test1.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +40,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -68,7 +79,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Shell Script.main.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;V1.2&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -125,7 +136,11 @@
       <workItem from="1775659893323" duration="598000" />
       <workItem from="1775743729773" duration="2106000" />
       <workItem from="1775788017942" duration="10271000" />
-      <workItem from="1775835832384" duration="2414000" />
+      <workItem from="1775835832384" duration="3897000" />
+      <workItem from="1775887146848" duration="4468000" />
+      <workItem from="1775898874160" duration="668000" />
+      <workItem from="1776867031350" duration="765000" />
+      <workItem from="1776987294376" duration="10542000" />
     </task>
     <task id="LOCAL-00001" summary="ide配置文件更新">
       <option name="closed" value="true" />
@@ -311,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775823372878</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Optimize log fix1">
+      <option name="closed" value="true" />
+      <created>1775838838635</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1775838838635</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +390,8 @@
     <MESSAGE value="fix bug of controller sync" />
     <MESSAGE value="add GPIO monitoring and application control scripts" />
     <MESSAGE value="Optimize log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimize log" />
+    <MESSAGE value="Optimize log fix1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize log fix1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
